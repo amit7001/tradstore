@@ -17,7 +17,7 @@ import static com.dbinterview.tradestore.constants.Constants.MATURITY_DATE_SHOUL
 public class TradeService {
 
     @Autowired
-    private TradeRepository tradeRepository;
+    private final TradeRepository tradeRepository;
 
     public TradeService(TradeRepository tradeRepository) {
         this.tradeRepository = tradeRepository;

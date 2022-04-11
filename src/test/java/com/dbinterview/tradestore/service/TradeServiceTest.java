@@ -46,13 +46,13 @@ class TradeServiceTest {
         Trade response = tradeService.processTrades(getTradeRequestForVersion(1));
 
         Assertions.assertTrue(response.getTradeIdentifier().getTradeId().equalsIgnoreCase("T1"));
-        Assertions.assertTrue(response.getTradeIdentifier().getVersion() == 1);
+        Assertions.assertEquals(response.getTradeIdentifier().getVersion(), 1);
 
         Mockito.when(tradeRepository.save(any(Trade.class))).thenReturn(getTradeObject(2));
         Trade response1 = tradeService.processTrades(getTradeRequestForVersion(2));
 
         Assertions.assertTrue(response1.getTradeIdentifier().getTradeId().equalsIgnoreCase("T1"));
-        Assertions.assertTrue(response1.getTradeIdentifier().getVersion() == 2);
+        Assertions.assertEquals(response1.getTradeIdentifier().getVersion(), 2);
     }
 
     @Test
