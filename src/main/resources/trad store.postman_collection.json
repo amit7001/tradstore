@@ -1,0 +1,32 @@
+{
+  "info": {
+    "_postman_id": "dfff2d4c-de73-48d6-a05d-314986db0be4",
+    "name": "trad store",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "db trade problem",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tradeIdentifier\": {\r\n    \"tradeId\": \"T1\",\r\n    \"version\": 1\r\n  },\r\n  \"counterPartyId\": \"CP-1\",\r\n  \"bookId\": \"B1\",\r\n  \"maturityDate\": \"2022-04-11\",\r\n  \"createdDate\": \"2022-04-11\",\r\n  \"expired\": \"N\"\r\n}"
+        },
+        "url": {
+          "raw": "localhost:9091/trades/",
+          "host": [
+            "localhost"
+          ],
+          "port": "9091",
+          "path": [
+            "trades",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
